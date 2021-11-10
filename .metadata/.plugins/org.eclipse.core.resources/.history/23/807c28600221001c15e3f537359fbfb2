@@ -1,0 +1,25 @@
+package main;
+
+public class TryCatch {
+
+	public static void main(String[] args) {
+		call();
+	}
+
+	private static void call() {
+		// TODO Auto-generated method stub
+		for(int i=0; i<5; i++)
+		{
+			try {
+				i = i/i;
+			}
+			catch(NullPointerException e)
+			{
+				System.out.println("Null Pointer called");
+				i=0;
+			}
+			
+			System.out.println("after try/catch - "+ i);
+		}
+	}
+}

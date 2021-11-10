@@ -1,0 +1,54 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class PrimeSum {
+	
+	public static void main(String[] args) {
+		int A = 1048574;
+		List<Integer> list = new ArrayList<>();
+        for (int num = 2; num <= A; num++)
+        {
+            boolean isPrime = true;
+            for (int i=2; i <= num/2; i++)
+            {
+                if ( num % i == 0)
+                {
+                    isPrime = false;
+                    break;
+                }
+            }
+ 
+            if ( isPrime == true )
+            {
+                list.add(num);
+            }
+                
+        }
+
+        int[] B = new int[2];
+
+        int k=0;
+        int i=0;
+        while(i<=list.size())
+        {
+            if(list.get(i) + list.get(list.size()-1 -k) == A)
+            {
+                B[0] = list.get(i);
+                B[1] = list.get(list.size() -1 -k);
+                break;
+            }
+            else if(list.get(i) + list.get(list.size()-1 -k) > A)
+            {
+                k++;
+            }
+            else{
+                i++;
+            }
+        }
+        
+        System.out.println(B[0] + "  " + B[1]);
+	}
+
+}

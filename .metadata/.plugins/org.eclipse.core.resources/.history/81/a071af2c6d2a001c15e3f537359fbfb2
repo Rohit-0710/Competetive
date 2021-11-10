@@ -1,0 +1,23 @@
+package main;
+
+public class Bits1 {
+	
+	public static void main(String[] args) {
+		System.out.println(good());
+	}
+	
+	private static int good() {
+		int count = 0;
+	    long a = 11;
+	    while (a != 0) {
+	        a &= a - 1;
+	        count++;
+	    }
+	    
+	    return count; 
+		
+	}
+
+	
+
+}

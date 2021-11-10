@@ -1,0 +1,29 @@
+package main;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class FibonnaciSeries {
+	
+	
+	
+
+	public static int Fibonacci(int n) {
+	
+		
+		if (n <= 1)
+
+			return Fibonacci(n);  
+		return Fibonacci(n) + Fibonacci(n - 1);
+	}
+	
+	public static void main(String[] args) throws NumberFormatException, IOException {
+		// TODO Auto-generated method stub
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println(Fibonacci(Integer.parseInt(br.readLine())));
+				
+	}
+
+}

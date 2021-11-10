@@ -1,0 +1,33 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class OnlyOddNumbers {
+	
+	public static void odd() {
+		
+		List<Integer> list = new ArrayList<Integer>();
+		list.add(1);
+		list.add(5);
+		list.add(3);
+		
+		if (list.parallelStream().anyMatch(x -> x % 2 == 0))
+		{
+			System.out.println("Odd Numbers are not there");
+		}
+		
+		else {
+			System.out.println("Only Odd Numbers are there");
+		}
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		odd();
+
+	}
+
+}

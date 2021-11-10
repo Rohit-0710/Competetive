@@ -1,0 +1,48 @@
+package main;
+
+public class KMPAlgo {
+	
+	public static void main(String[] args) {
+		String search = "ababcabcabababd";
+		String pattern = "ababd";
+		
+		kmp(search, pattern);
+	}
+
+	private static void kmp(String search, String pattern) {
+		
+		int index =0;
+		int i=0;
+		int j=0;
+		boolean check = false;
+		
+
+		while(i >=0 && i<search.length())
+		{
+			while(j >=0 && j<pattern.length())
+			{
+				if(search.charAt(i) == pattern.charAt(j))
+				{
+					j++;
+					i++;
+					index++;
+				}
+				
+				else {
+					j = j-index;
+					index = 0;
+				}
+				
+				if(i == search.length() && j == pattern.length())
+				{
+					check = true;
+					break;
+				}
+			}
+		}
+		
+		System.out.println(pattern.length() - j);
+		
+	}
+
+}

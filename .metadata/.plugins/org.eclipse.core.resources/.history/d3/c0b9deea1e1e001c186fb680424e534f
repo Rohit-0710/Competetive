@@ -1,0 +1,16 @@
+package main;
+
+public class KMPAlgo {
+	
+	public static void main(String[] args) {
+		String search = "ababcabcabababd";
+		String pattern = "ababd";
+		
+		kmp(search, pattern);
+	}
+
+	private static void kmp(String search, String pattern) {
+		
+	}
+
+}

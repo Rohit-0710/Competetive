@@ -1,0 +1,31 @@
+package main;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class DuplicateElements {
+
+	
+	public static int[] arr = {1 , 4 ,6 ,7 ,8 , 2, 4, 3, 1 ,5 ,6, 7, 1, 5, 9};
+	
+	public static void duplicate(int[] t)
+	{
+		
+		Set<Integer> set = new HashSet<>();
+		
+		for(int i:t)
+		{
+			if(set.add(i) == false)
+			{
+				System.out.println(i);
+			}
+		}
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		duplicate(arr);
+	}
+
+}

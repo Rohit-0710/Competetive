@@ -1,0 +1,34 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class EqualSum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num = 9;
+		
+		List<Integer> list = new ArrayList<Integer>();
+		for(int i =0; i<num; i++)
+		{
+			list.add(i);
+		}
+		
+		for(int i =0; i<list.size(); i++)
+		{
+			int a = list.get(i);
+			for(int j =0; j<list.size(); j++)
+			{
+				int b = list.get(j);
+				
+				if(a + b == num )
+				{
+					System.out.printf("{%d, %d}, ", a, b);
+				}
+			}
+			
+		}
+	}
+
+}
